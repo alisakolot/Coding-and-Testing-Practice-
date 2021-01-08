@@ -1,0 +1,26 @@
+1. Black circles are dead branches. There will never be two dead branches 
+    in a row
+2. The beginning and ending branches are alive
+3. The lemur jumps from 2 to 4 and 4 to 6. She skips 3, 5
+4. The list of branches is represented by a list: [0, 0, 1, 0, 1, 0]
+    1 is dead
+5. Calculate number of jumps she needs to make
+
+
+Solution Possibilities:
+    A. Indexing 
+    B. Linked List? (not sure about this one)
+
+1. Indexing 
+    -Given: [0, 0, 1, 0, 1, 0]
+
+        1. if the val is 1, skip 
+        or if the value is 0, enumerate as you iterate over the list
+        enumerate(some_list): looping over something and have an automatic counter
+        2. Add a condition that would ensure that 1 is not enumerated
+        3. return the last value of enumerate(some_list)
+
+        But why enumerate? Can't we solve it without this method? 
+
+        
+        

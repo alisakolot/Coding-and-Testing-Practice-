@@ -1,0 +1,27 @@
+1. There are num_holes, representing occupied areas in a list 
+2. Each hole is one meter apart
+3.  the lemming in hole #1 needs to travel 2m to hole #3
+    the lemming in hole #2 needs to travel 1m to hole #3
+    the lemming in hole #4 needs to travel 1m to hole #3 (or 1m to hole #5)
+    the lemming in hole #6 needs to travel 1m to hole #5
+4. Calculate the longest amount in metters any lemming needs to travel. 
+    Return a single number for hte nax dist needed to travel
+
+num_holes:  number of num_holes
+cafe: indexes of holes with food in them, sorted list
+
+Test 1:
+num_holes = 2
+cafe = [0, 0, 1, 0, 1, 0]
+
+Test 2:
+num_holes = 3
+cafe = [0, 0, 1, 0, 0, 1, 0, 1,0]
+
+
+Test 3:
+num_holes = 2
+cafe = [0, 1, 0, 1, 0]
+
+
+
