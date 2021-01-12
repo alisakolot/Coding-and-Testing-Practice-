@@ -14,18 +14,44 @@ Test:
 
 import statistics 
 def common(a,b,c):
+
+    # Statistics  Solution:
+
+    # lst = []
+    # lst1 = []
+    # for items in a, b, c:
+    #     for num in items:
+    #         lst.append(num)
+    #     num1 =  statistics.mode(lst)
+    #     lst1.append(num1)
+    #     lst = [i for i in lst if i!= num1]
+
+    # print(lst1)
+    # print(lst)
+    # return sum(lst1)
+
+
+    # Dictionary solution: 
+    occurence = {}
+
     lst = []
-    lst1 = []
-    for items in a, b, c:
-        for num in items:
+    for item in a, b, c:
+        for num in item:
             lst.append(num)
-        num1 =  statistics.mode(lst)
-        lst1.append(num1)
-        lst = [i for i in lst if i!= num1]
-    # lst1 = set(lst1)
+    
+    for n in lst:
+        if n in occurence:
+            occurence[n] += 1
+        else:
+            occurence[n] = 1
+
+    print(occurence)
+
+    lst1 = sorted(occurence, key = occurence.get)
     print(lst1)
-    print(lst)
-    return sum(lst1)
+    
+
+
 if __name__ == "__main__":
     import doctest
     if doctest.testmod().failed == 0:
