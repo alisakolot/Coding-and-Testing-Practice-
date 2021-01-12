@@ -21,23 +21,40 @@ Tests:
     
 """
 
+def differences(a):
+    while len(a)>1:
+        k = []
+        for i in range(len(a)-1):
+            k.append(abs(a[i+1]-a[i]))
+        a = k
+    else:
+        if a == []:
+            return 0
+        if len(a) == 1:
+            return a[0]
+    return k[0]
 
 
-def differences(lst):
-    if len(lst) == 0:
-        return 0
-    if len(lst) == 1:
-        return 1
+
+
+
+
+
+# def differences(lst):
+#     if len(lst) == 0:
+#         return 0
+#     if len(lst) == 1:
+#         return 1
     
-    diff = differences(lst)
-    lst2 = []
+#     diff = differences(lst)
+#     lst2 = []
 
-    if diff == 0:
-        return None
+#     if diff == 0:
+#         return None
     
-    for i in range(len(lst)):
-        lst2.append(lst[i+1] - lst[i])
-        return lst2
+#     for i in range(len(lst)):
+#         lst2.append(lst[i+1] - lst[i])
+#         return lst2
 
 
 
