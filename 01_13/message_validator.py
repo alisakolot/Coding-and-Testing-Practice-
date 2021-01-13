@@ -17,8 +17,11 @@ Tests:
 """
 
 def is_a_valid_message(message):
-    # your code
-    pass
+    for num in range(1,9):
+        if str(num) in message:
+            print("y")
+            
+            print(message.split(str(num)))
 
 if __name__ == "__main__":
     import doctest
