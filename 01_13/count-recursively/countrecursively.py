@@ -15,17 +15,16 @@ For example:
 
 def count_recursively(lst):
     """Return number of items in a list, using recursion."""
-    if len(lst) == 0:
-        return 0
-    if len(lst) == 1:
-        return 1
-    count = count_recursively(lst)
-
-    if count== 0:
-        return None
+    if lst == []:
+        return 0 
     else:
-        return len(lst)
+        # lst[1]
+        lst.pop()
+        count = count_recursively(lst)
+        return count
 
+    
+    
 # def factorial(x):
 #     """This is a recursive function
 #     to find the factorial of an integer"""
