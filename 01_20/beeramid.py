@@ -17,13 +17,13 @@ levels of a beer can pyramid you can make, given the parameters of:
 
 
 Test:
-    >>> (beeramid(9, 2)
+    >>> beeramid(9, 2)
     1
 
-    >>> (beeramid(21, 1.5)
+    >>> beeramid(21, 1.5)
     3
 
-    >>> (beeramid(-1, 4)
+    >>> beeramid(-1, 4)
     0
 
     >>> beeramid(1500, 2)
@@ -34,27 +34,30 @@ Test:
 
 """
 
-def factorial(x):
-    if x == 1:
-        return 1
-    else:
-        return (x * factorial(x-1))
+# def factorial(x):
+#     if x == 1:
+#         return 1
+#     else:
+#         return (x * factorial(x-1))
 
-
+import math
 def beeramid(bonus, price):
     # bonus > 1
     lst = []
     if bonus > 1:
         beers = bonus // price
-    # check what's the nearest factorial to beers
-        for num in range(1, beers):
-            if factorial(num) >  beers:
-                print(factorial(num))
-                break
-            else:
-                lst.append(factorial(num))
-    print(lst)
-
+        # print(beers)
+        # create list of squares in range beers
+        for num in range(1, int(beers)):
+            n = math.sqrt(num)
+            
+            if n - int(n) == 0:
+                lst.append((n))
+        # print(len(lst))
+    else:
+        return 0
+    
+    return len(lst)
 
 if __name__ == "__main__":
     import doctest
