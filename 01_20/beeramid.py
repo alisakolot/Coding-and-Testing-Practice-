@@ -59,6 +59,8 @@ def beeramid(bonus, price):
     
     return len(lst)
 
+
+
 if __name__ == "__main__":
     import doctest
     if doctest.testmod().failed == 0:

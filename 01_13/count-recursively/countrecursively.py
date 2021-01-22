@@ -18,12 +18,20 @@ def count_recursively(lst):
     if lst == []:
         return 0 
     else:
-        # lst[1]
-        lst.pop()
-        count = count_recursively(lst)
-        return count
+        # print(lst)
+        lst.pop() 
+        return 1 + count_recursively(lst)
 
-    
+
+def count_recursively2(lst):
+    def count_func(lst, count=0):
+        if lst == []:
+            return count
+        else:
+            return count_func(lst[:-1], count=count+1)
+    return count_func(lst)
+print("AHHH", count_recursively2([1, 2, 3, 4, 5]))
+
     
 # def factorial(x):
 #     """This is a recursive function
