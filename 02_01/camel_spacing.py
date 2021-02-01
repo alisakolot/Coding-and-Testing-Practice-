@@ -5,22 +5,28 @@ solution("camelCasing")  ==  "camel Casing"
 
 Test:
     >>> spacing("camelCasing")
-    "camel Casing"
+    'camel Casing'
     
     >>> spacing("helloWorld")
-    "hello World"
+    'hello World'
 
     >>> spacing("breakCamelCase")
-    "break Camel Case"
+    'break Camel Case'
     
 """
 
 
 def spacing(s):
-    pass
+    t = '' 
+    for char in s:
+        if char == char.upper():
+            i = s.index(char)
+            t += f' {char}'
+        else:
+            t += char
 
-
+    return t
 if __name__ ==  '__main__':
     import doctest
-    if doctest.testmod().failed = 0:
+    if doctest.testmod().failed == 0:
         print("\n ✨ You're doing great! ✨ \n")
