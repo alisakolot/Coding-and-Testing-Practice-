@@ -1,6 +1,5 @@
 """Pete likes to bake some cakes. He has some recipes and ingredients. 
-Unfor
-tunately he is not good in maths. Can you help him to find out, 
+Unfortunately he is not good in maths. Can you help him to find out, 
 how many cakes he could bake considering his recipes?
 
 Write a function cakes(), which takes the recipe (object) and the 
@@ -17,19 +16,25 @@ cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, mil
 cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})
 
 Tests:
-    >>> cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200})
+    >>> cakes({'eggs': 1, 'flour': 500, 'sugar': 200}, {'flour': 1200, 'sugar': 1200, 'eggs': 5, 'milk': 200})
     2
 
-    >>> cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})
+    >>> cakes({'apples': 3, 'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100}, {'sugar': 500, 'flour': 2000, 'milk': 2000})
     0
-
-
 """
+
 def cakes(recipe, available):
-    pass
+    min_cakes = 10 ** 10 # TODO: DON'T MAKE ASSUMPSTIONS
+    for x in recipe:
+        if x in available:
+            ing_num = available[x] // recipe[x]
+            if ing_num < min_cakes:
+                min_cakes = ing_num
+            
+        else:
+            return 0
 
-
-
+    return min_cakes
 
 if __name__ == "__main__":
     import doctest
