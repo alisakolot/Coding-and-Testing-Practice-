@@ -37,7 +37,18 @@ Test:
 """
 
 def josephus(items, k):
-    pass
+    # find all the  indices in the list that are multiples of k 
+        # if the index number % k == 0, then add to the lst
+        # pop items from list
+    # begin process again
+    # conditions: if the length of the list is less than k, then 
+
+    lst = []
+    i = items.index(k-1)
+    for i in range(len(lst1)-1):
+        if i % 4 == 0:
+            lst.append(lst1[i-1])
+            lst1.pop(i-1)
 
 if __name__ == '__main__':
     import doctest
