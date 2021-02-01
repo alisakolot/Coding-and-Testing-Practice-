@@ -42,15 +42,19 @@ def josephus(items, k):
         # pop items from list
     # begin process again
     # conditions: if the length of the list is less than k, then 
-
-    lst = []
-    i = items.index(k-1)
-    for i in range(len(lst1)-1):
-        if i % 4 == 0:
-            lst.append(lst1[i-1])
-            lst1.pop(i-1)
+    if len(items) <= 0:
+        return items
+    else:
+        lst = []
+        i = items.index(k-1)
+        for i in range(len(items)-1):
+            if i % 4 == 0:
+                lst.append(items[i-1])
+                items.pop(i-1)
+                josephus(items, k)
+    return lst
 
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
-        print("\n ✨You're solving it! Good job! ✨ \n ")
+        print("\n ✨ You're solving it! Good job! ✨ \n ")
