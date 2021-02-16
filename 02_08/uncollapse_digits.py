@@ -4,7 +4,7 @@
 
 Your task is to split the string into separate digits:
 
-"zero nine one one eight two seven three six four two five"\
+"zero nine one one eight two seven three six four two five"
 
 Test: 
     >>> uncollapse("three")
@@ -27,17 +27,17 @@ Test:
 
 def uncollapse(digits):
     nums = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-    result = []
-    index_list = []
-    for number in nums:
-        if number in digits:
-            lastchar = digits.index(number)
-            index_list.append(lastchar)
-            result.append(number)
-        else:
-            print('*')
-    
-    print(index_list)
+    nums = ["zero", "one", "two", "three", "four", "five", 'six', "seven", "eight", "nine"]
+    result = "" 
+    str2 = ""
+    for char in digits:
+        str2 += char
+        for n in nums:
+            if str2 == n:
+                result += str2 + " "
+                str2 = ""
+    result = result[:-1]
+    # return "\"" + result[:-1] + "\""
     return result
 
 
