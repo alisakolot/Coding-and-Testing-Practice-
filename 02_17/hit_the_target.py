@@ -50,8 +50,15 @@ def solution(mtrx):
         for item in lst:
             if item == 'x':
                 print('target idx', lst.index('x'))
+                target_idx = lst.index('x')
             elif item == '>':
                 print('pointer idx', lst.index('>'))
+                pointer_idx = lst.index('>')
+
+    if target_idx > pointer_idx:
+        return True 
+    return False
+            
 
 if __name__ == '__main__':
     import doctest
