@@ -41,12 +41,17 @@ Tests:
 
 
 def solution(mtrx):
-    pass
+    # 1. iterate through each item in the nested lists
+    # 2. Find location of target
+    # 3. Compare location of target to location of pointer
+    # 4. If the location of target is greater than pointer, return True
 
-
-
-
-
+    for lst in mtrx:
+        for item in lst:
+            if item == 'x':
+                print('target idx', lst.index('x'))
+            elif item == '>':
+                print('pointer idx', lst.index('>'))
 
 if __name__ == '__main__':
     import doctest
