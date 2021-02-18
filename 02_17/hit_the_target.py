@@ -46,18 +46,26 @@ def solution(mtrx):
     # 3. Compare location of target to location of pointer
     # 4. If the location of target is greater than pointer, return True
 
-    for lst in mtrx:
-        for item in lst:
-            if item == 'x':
-                print('target idx', lst.index('x'))
-                target_idx = lst.index('x')
-            elif item == '>':
-                print('pointer idx', lst.index('>'))
-                pointer_idx = lst.index('>')
+    # MISSED CONSIDERATIONS:
+        # Pointer and target need to be in the same list
 
-    if target_idx > pointer_idx:
-        return True 
-    return False
+    for lst in mtrx:
+        if 'x' in lst and '>' in lst:
+            print('both')
+        else:
+            print('nope')
+
+
+
+    #         for item in lst:
+    #             if item == 'x':
+    #                 target_idx = lst.index('x')
+    #             elif item == '>':
+    #                 pointer_idx = lst.index('>')
+
+    # if target_idx > pointer_idx:
+    #     return True
+    # return False
             
 
 if __name__ == '__main__':
