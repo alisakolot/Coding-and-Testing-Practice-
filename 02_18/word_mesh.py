@@ -16,7 +16,7 @@ Output: Either a string of letters that mesh the words together or the string "f
 
 
 Tests:
-    >>> word_mesh("beacon", "condominium", "umbilical", "california"])
+    >>> word_mesh(["beacon", "condominium", "umbilical", "california"])
     'conumcal'
 
     >>> word_mesh(["allow", "lowering", "ringmaster", "terror"]) 
@@ -31,7 +31,13 @@ Tests:
 # 5. When the items stop matching then append the string to a results list
 
 def word_mesh(words):
-    pass
+    for i in range(len(words)-1):
+        for rev in words[i][::-1]:
+            # print(rev, ' *')
+            if rev == words[i][-(i+1)]:
+                print('match found:', rev, words[i][-(i+1)])
+            else:
+                print('stop')
 
 
 
