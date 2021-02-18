@@ -16,12 +16,16 @@ Output: Either a string of letters that mesh the words together or the string "f
 
 
 Tests:
-    >>> 
+    >>> word_mesh("beacon", "condominium", "umbilical", "california"])
+    'conumcal'
+
+    >>> word_mesh(["allow", "lowering", "ringmaster", "terror"]) 
+    'lowringter'
 
 """
 
 def word_mesh(words):
-    return ""
+    pass
 
 
 
