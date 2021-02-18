@@ -23,6 +23,12 @@ Tests:
     'lowringter'
 
 """
+# Pseudocode:
+# 1. Iterate through the list 
+# 2. Each item ending needs to be compared to the following item in the list
+# 3. Iterate in reverse through the last char of item at prev index
+# 4.  If the items match then add them to a string 
+# 5. When the items stop matching then append the string to a results list
 
 def word_mesh(words):
     pass
