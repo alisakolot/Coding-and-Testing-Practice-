@@ -16,12 +16,23 @@ Output: Either a string of letters that mesh the words together or the string "f
 
 
 Tests:
-    >>> word_mesh(["beacon", "condominium", "umbilical", "california"])
-    'conumcal'
+    # >>> word_mesh(["beacon", "condominium", "umbilical", "california"])
+    # 'conumcal'
 
-    >>> word_mesh(["allow", "lowering", "ringmaster", "terror"]) 
-    'lowringter'
+    # >>> word_mesh(["allow", "lowering", "ringmaster", "terror"]) 
+    # 'lowringter'
 
+    >>> word_mesh(["allow", "lowering"])
+    'low'
+
+    >>> word_mesh(["a", "a"])
+    'a'
+
+    >>> word_mesh(["abba", "abab"])
+    'a'
+
+    >>> word_mesh(['abc', 'xyz'])
+    "failed to mesh"
 """
 # Pseudocode:
 # 1. Iterate through the list 
@@ -31,13 +42,52 @@ Tests:
 # 5. When the items stop matching then append the string to a results list
 
 def word_mesh(words):
-    for i in range(len(words)-1):
-        for rev in words[i][::-1]:
-            # print(rev, ' *')
-            if rev == words[i][-(i+1)]:
-                print('match found:', rev, words[i][-(i+1)])
+    # for i in range(len(words)-1):
+    #     for rev in words[i][::-1]:
+    #         # print(rev, ' *')
+    #         if rev == words[i][-(i+1)]:
+    #             print('match found:', rev, words[i][-(i+1)])
+    #         else:
+    #             print('stop')
+    # print(words)
+    if len(words) <= 1:
+        return "failed to mesh"
+
+    # ["allow", "lowering"]
+    string = 'll' 
+    allow
+    lowering 
+
+    elif len(words) == 2: 
+   
+        item1 = words[0][::-1]
+        item2 = words[1]
+
+        # string = ''
+        # for char in item1:
+        #     if char in item2:
+        #         if char not in string:
+        #             string += char
+
+        word_lengths = []
+        for item in words:
+            word_lengths.append(len(item))
+        
+        string = ''
+        for i in range(min(word_lengths)):
+            if item1[i] == item2[i]:
+                string += item1[i]
             else:
-                print('stop')
+                break
+        
+        print(string[::-1])
+
+        
+
+
+
+
+
 
 
 
