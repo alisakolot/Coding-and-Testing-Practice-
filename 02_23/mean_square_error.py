@@ -26,6 +26,13 @@ def solution(array_a, array_b):
         for i in range(len(array_a)):
             nums_lst.append(abs(array_a[i] - array_b[i]) ** 2)
     
+    # if isinstance(avg(nums_lst), float):
+    #     n = str(avg(nums_lst))
+    #     if '.' in n:
+    #         position = n.index('.')
+    #         print(position)
+    #         if n[position + 1] == 0:
+    #             return n[:position]
     return avg(nums_lst)
       
 if __name__ == '__main__':
