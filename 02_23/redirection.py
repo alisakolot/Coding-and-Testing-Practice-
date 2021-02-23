@@ -23,14 +23,22 @@ Tests:
 
 def redirection(arr):
     directions = []
-    for i in range(len(arr)-1):
+    for i in range(len(arr)):
         if arr[i] == "NORTH" and arr[i+1] == "SOUTH":
-            directions.append(arr[i+2])
-        elif arr[i] == "EAST" and arr[i+1] == "WEST":
-            directions.append(arr[i+2])
-        else: 
-            directions.append(arr[i])
+            print( f'{arr[i]} and {arr[i+1]} cancel each other out')
+            
+            
+    print(arr)      
+        # elif arr[i] == "EAST" and arr[i+1] == "WEST":
+        #     arr.remove("EAST")
+        #     arr.remove("WEST")
+        #     arr = arr
+        # else: 
+        #     directions.append(arr[i])
+        #     arr = directions
     print(directions)
+
+
 
 
 
