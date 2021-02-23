@@ -14,10 +14,19 @@ Tests:
     16.5
 """
 
+def avg(nums_lst):
+    return sum(nums_lst) / len(nums_lst)
+
+
 
 def solution(array_a, array_b):
-    pass
-
+    # if arrays are not the same length:
+    nums_lst = []
+    if len(array_a) ==  len(array_b):
+        for i in range(len(array_a)):
+            nums_lst.append(abs(array_a[i] - array_b[i]) ** 2)
+    
+    return avg(nums_lst)
       
 if __name__ == '__main__':
     import doctest
