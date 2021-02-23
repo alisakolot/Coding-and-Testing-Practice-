@@ -26,6 +26,11 @@ def redirection(arr):
     for i in range(len(arr)):
         if arr[i] == "NORTH" and arr[i+1] == "SOUTH":
             print( f'{arr[i]} and {arr[i+1]} cancel each other out')
+            arr.pop("NORTH")
+            arr.pop("SOUTH")
+        
+            
+        
             
             
     print(arr)      
