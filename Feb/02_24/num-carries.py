@@ -36,7 +36,10 @@ def number_of_carries(a, b):
     count = 0
     
     for i in range(len(a)):
-        total = int(b[-i]) + int(a[-i])
+        if len(b) == 1:
+            total = int(b[0]) +  int(a[-i])
+        else:
+            total = int(b[-i]) + int(a[-i])
         # print(total)
         if total >= 10:
             count += 1
