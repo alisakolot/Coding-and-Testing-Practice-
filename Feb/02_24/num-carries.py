@@ -31,9 +31,17 @@ Tests:
 """
 
 def number_of_carries(a, b):
-    #coding and coding..
-    pass
-
+    a = list(str(a))
+    b = list(str(b))
+    count = 0
+    
+    for i in range(len(a)):
+        total = int(b[-i]) + int(a[-i])
+        # print(total)
+        if total >= 10:
+            count += 1
+    # print('count', count)
+    return count
 
 if __name__ == '__main__':
     import doctest
