@@ -22,28 +22,13 @@ Tests:
 """
 
 def redirection(arr):
-    directions = []
-    for i in range(len(arr)):
-        if arr[i] == "NORTH" and arr[i+1] == "SOUTH":
-            print( f'{arr[i]} and {arr[i+1]} cancel each other out')
-            arr.pop("NORTH")
-            arr.pop("SOUTH")
-        
-            
-        
-            
-            
-    print(arr)      
-        # elif arr[i] == "EAST" and arr[i+1] == "WEST":
-        #     arr.remove("EAST")
-        #     arr.remove("WEST")
-        #     arr = arr
-        # else: 
-        #     directions.append(arr[i])
-        #     arr = directions
-    print(directions)
+    dir = {"NORTH": "SOUTH", "SOUTH": "NORTH", "EAST": "WEST", "WEST": "EAST"}
 
-
+    for direction in arr:
+        if dir[direction]:
+            dir.get(direction, dir[direction])
+            arr.remove((dir.get(direction, dir[direction])))
+            print(arr)
 
 
 
@@ -51,4 +36,4 @@ def redirection(arr):
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
-        print("Well, I'll be hornswaggled! 🤠 You made it across the West, partner! 🌵 \n")
+        print("\n Well, I'll be hornswaggled! 🤠 You made it across the West, partner! 🌵 \n")
