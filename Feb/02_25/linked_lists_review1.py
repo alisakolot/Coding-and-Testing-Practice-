@@ -33,6 +33,7 @@ class LinkedList:
             current = current.next
 
 
+
 # Linked list with a single node 
 # LL = LinkedList()
 # LL.head = Node(3)
