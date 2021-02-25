@@ -44,8 +44,7 @@ Tests:
     1.0000
 
 """
-
-def weather_prediction(days, weather_today, final_weather, P):
+def predict(days, weather_today, final_weather, P):
     # Your code here
     pass
 

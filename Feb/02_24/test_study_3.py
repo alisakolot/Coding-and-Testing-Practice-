@@ -1,3 +1,4 @@
+
 """Assert that a certain exception is raised:"""
 # import pytest
 
@@ -17,6 +18,7 @@
 #     def test_two(self):
 #         x = "hello"
 #         assert hasattr(x, "check")
+
 
 """Request a unique temporary directory for functional tests"""
 def test_needs(tmpdir):

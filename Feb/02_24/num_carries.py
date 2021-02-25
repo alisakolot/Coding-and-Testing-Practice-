@@ -31,6 +31,9 @@ Tests:
 """
 
 def number_of_carries(a, b):
+    if a < 0 or b < 0:
+        return 0
+        
     a = list(str(a))
     b = list(str(b))
     count = 0
