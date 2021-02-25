@@ -37,13 +37,13 @@ Notes
 
 
 Tests: 
-    b1 = 1000.00!=
+    b1 = '1000.00!
 
     125 Market !=:125.45
     126 Hardware =34.95
     127 Video! 7.45
     128 Book :14.32
-    129 Gasoline ::16.10
+    129 Gasoline : 16.10
 
 
     b1sol = Original Balance: 1000.00\r
@@ -58,7 +58,7 @@ Tests:
     >>> balance(b1)
     b1sol
 
-    b2=1233.00
+    b2 = 1233.00
     125 Hardware;! 24.8?;
     123 Flowers 93.5
     127 Meat 120.90
