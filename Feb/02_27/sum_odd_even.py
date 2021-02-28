@@ -13,4 +13,3 @@ def odd_or_even(arr):
         return "even"
     else:
         return "odd"
-print(odd_or_even([0,1,2]))
