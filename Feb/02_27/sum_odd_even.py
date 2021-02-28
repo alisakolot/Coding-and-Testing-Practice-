@@ -8,7 +8,9 @@ If the input array is empty consider it as:
 """
 
 def odd_or_even(arr):
+    print(sum(arr))
     if sum(arr) % 2 == 0:
         return "even"
     else:
         return "odd"
+print(odd_or_even([0,1,2]))
