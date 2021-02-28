@@ -20,27 +20,27 @@ at all. Do not treat other forms of brackets as parentheses
 (e.g. [], {}, <>)."""
 
 def valid_parentheses(string):
-    lp = 0
-    rp = 0
+    paren_str = ''
     
     for char in string:
         if char == '(':
-            lp += 1
+            paren_str += char
             li = string.index(char)
             char = char[(li + 1):]
         elif char == ')':
-            rp += 1
+            paren_str += char
             ri = string.index(char)
             char = char[(ri + 1):]
         else:
             print(char)
+    print(paren_str)
 
-    if lp != rp:
-        print('not match')
-        return False
+    culprit = ')('
+    if culprit in paren_str:
+        print('False')
     else:
-        print('match')
-        return True
+        print('True')
 
+    
 # Reason for error:
 # Parenthesis that do not face each other cannot count as a match
