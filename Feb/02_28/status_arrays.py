@@ -16,6 +16,41 @@ two or more elements, you will output them in order of appearance
 in the array.
 
 """
+
 def status(nums):
-    #let's crank some code!
-    pass
+    # empty dictionary that contains status, array element
+    status_dict = {}
+    # address outliers:
+    if len(nums) == 0:
+        return "No items found"
+    else:
+        for n in nums:
+            # 1. Find the position of num in the array 
+            position = nums.index(n)
+
+            # 2. Find the elements that are less than n
+            count = 0
+            x  = n
+            for i in range(len(nums)):
+                if x > nums[i]:
+                    count += 1
+            
+            # adding n, count to dictionary
+            status_dict[n] = count
+    
+    # 4. Get list ordered by status
+    result = []
+    lst = []
+    for k,v in status_dict.items():
+        lst.append(status_dict[k])
+    
+    for x in sorted(lst):
+        for k,v in status_dict.items():
+            if x == v:
+                result.append(k)
+    return result
+        
+
+print(status([0, 10, 4, 5, 2]))
+# print(status([]))
+
