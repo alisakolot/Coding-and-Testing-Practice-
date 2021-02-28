@@ -10,4 +10,9 @@ def test_ingredients():
 def test_outliers():
     assert cakes({'apples': 0, 'flour': 60, 'sugar': 30, 'milk': 20, 'oil': 2}, {'sugar': 0, 'flour': 200, 'milk': 2000}) == 0
     assert cakes({'apples': 0, 'flour': 60, 'sugar': 30, 'milk': 20, 'oil': 2},{}) == 0
-    # assert cakes({}, {}) ==  0
+    # Check the error message
+    assert cakes({}, {}) ==  0
+
+# def test_inputs():
+#     # How to check if the inputs are the correct data type
+#     assert isinstance(cakes(recipe), dict) ==  True

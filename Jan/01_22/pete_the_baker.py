@@ -24,17 +24,22 @@ Tests:
 """
 
 def cakes(recipe, available):
-    min_cakes = 10 ** 10 # TODO: DON'T MAKE ASSUMPSTIONS
+    assert isinstance(recipe, dict) ==  True
+    # min_cakes = 10 ** 10 # TODO: DON'T MAKE ASSUMPSTIONS
+    ing_num_lst = []
     for x in recipe:
         if x in available:
             ing_num = available[x] // recipe[x]
-            if ing_num < min_cakes:
-                min_cakes = ing_num
-            
+            ing_num_lst.append(ing_num)
+            # if ing_num < min_cakes:
+            # min_cakes = ing_num
         else:
             return 0
 
-    return min_cakes
+    return min(ing_num_lst)
+    
+
+    # return min_cakes
 
 if __name__ == "__main__":
     import doctest
