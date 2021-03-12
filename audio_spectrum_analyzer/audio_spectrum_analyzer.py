@@ -2,7 +2,7 @@ import pyaudio
 import struct 
 # unpack audio data into integers
 
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt 
 
 
@@ -38,11 +38,15 @@ data = stream.read(CHUNK)
 data_int = struct.unpack(str(2 * CHUNK) + 'B',  data)
 # print(len(data)) # length of data is double what our chunk is
 # print(data_int)# a tuple, int vals 0=255
-# this obj will give us integer data instead of byte data
+
+# data_int obj will give us integer data instead of byte data
 # unpack: given string which signals how much data/size of data so 
 #   it knows how to unpack it
 #       => we pass the data: string
 
+fig, ax = plt.subplots ()
+ax.plot(data_int, '-')
+plt.show()
 
 # print(data)
 
