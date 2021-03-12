@@ -5,9 +5,12 @@ import struct
 import numpy as np
 import matplotlib.pyplot as plt 
 
+# from scipy.io import wavfile
+# fs, data = wavfile.read('output.wav')
+
 
 # will display different window
-# %matplotlib tk 
+# % matplotlib qt5
 
 CHUNK = 1024 * 4 
 # how much audio will be processed at a time
@@ -66,9 +69,10 @@ while True:
     fig.canvas.draw()
     fig.canvas.flush_events()
 
+    plt.show()
 
 # ax.plot(data_int, '-')
-# plt.show()
+
 
 # print(data)
 
