@@ -22,8 +22,8 @@ than zero, but they may be zero or be larger than the length of the list.
 '''
 
 def inverse_slice(items, a, b):
-    # Your code here
-    pass
+    return items[0:a]+items[b:]
+
 
 if __name__ == '__main__':
     import doctest
