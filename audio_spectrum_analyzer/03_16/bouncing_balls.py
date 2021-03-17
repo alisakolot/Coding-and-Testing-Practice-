@@ -25,13 +25,12 @@
     (Condition 2) not fulfilled).
 
 Test: 
-    >>> bouncing_ball(- h = 3, 0.66, 1.5)
+    >>> bouncing_ball(-3, 0.66, 1.5)
     3
 '''
 
 def bouncing_ball(h, bounce, window):
-    print(h, bounce, window)
-    return -1
+    pass
 
 
 
