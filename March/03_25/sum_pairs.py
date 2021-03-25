@@ -15,16 +15,15 @@ Tests:
 def sum_pairs(lst, n):
     result = []
     for i in range(len(lst)-1):
-        pair_sum = lst[i]+lst[i+1] 
-        print(f'{lst[i]} + {lst[i+1]} = {pair_sum}')
-        if n == pair_sum:
-            result.append(lst[i])
-            result.append(lst[i+1])
-            print('ok')
+        for j in range(i+1, len(lst)):
+            if lst[i] + lst[j] == n:
+                result.append(lst[i])
+                result.append(lst[j])
     return result
 
 # Some solution ideas: 
     # turn the given list into a stack?
+    # two sum 
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
