@@ -11,19 +11,31 @@ Tests:
 
 
 '''
-
-def sum_pairs(lst, n):
-    result = []
-    for i in range(len(lst)-1):
-        for j in range(i+1, len(lst)):
-            if lst[i] + lst[j] == n:
-                result.append(lst[i])
-                result.append(lst[j])
-    return result
+# Run time: O(N^2)
+# def sum_pairs(lst, n):
+#     result = []
+#     for i in range(len(lst)-1):
+#         for j in range(i+1, len(lst)):
+#             if lst[i] + lst[j] == n:
+#                 result.append(lst[i])
+#                 result.append(lst[j])
+#     return result
 
 # Some solution ideas: 
     # turn the given list into a stack?
     # two sum 
+
+# Alternate solution
+def sum_pairs(lst, n):
+    result = []
+    for i in range(len(lst)-1):
+        diff = n - lst[i]
+        if diff in lst:
+            result.append(diff)
+            result.append(lst[i])
+    print(result)        
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
