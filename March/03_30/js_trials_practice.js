@@ -51,3 +51,33 @@ function getRange(start, stop) {
     return result
 }
 // console.log(getRange(3, 8))
+// reminder:  let allows you to delare variables that are limited to the 
+    // scope of the block statement/expression in which it's used
+// 'in' lets you loop over indices
+// 'of' lets you loop over elements
+
+function censorVowels(word) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let result = '';
+    // for (let i = 0; i < vowels.length; i++) {
+    //     if (word.indexOf(vowels[i]) > -1) {
+    //         console.log('false');
+    //         result += word[i]        }
+    // }
+    for (let i=0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            console.log(word[i])
+        } else {
+            result += word[i]
+        }
+    }
+    console.log(result)
+}
+// console.log(censorVowels('javascript'))
+
+function snakeToCamel(string) {
+    let camel = []; 
+    let wordList = string.split("_");
+    console.log(wordList);
+}
+console.log(snakeToCamel('the_great_british_baking_show'))
