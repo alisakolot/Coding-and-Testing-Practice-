@@ -78,6 +78,35 @@ function censorVowels(word) {
 function snakeToCamel(string) {
     let camel = []; 
     let wordList = string.split("_");
-    console.log(wordList);
+    camel.push(wordList[0])
+    
+    for (let word of wordList.slice(1)) {
+        camel.push((word[0].toUpperCase() + word.slice(1)));
+    }
+    return camel.join('');
 }
-console.log(snakeToCamel('the_great_british_baking_show'))
+// console.log(snakeToCamel('the_great_british_baking_show'))
+
+
+// **********************************************
+// function longestWordLength(words) {
+//     const wordLengths = {};
+//     let keys = [];
+//     // for (const item of words) {
+//     //     keys.push(item.length);
+//     //     for (const num of keys) {
+//     //         wordLengths.num  = item;
+//     //     }
+//     // }
+//     for (let i=0; i < words.length; i++) {
+//         for (let item in words) {
+//             wordLengths[i] = {
+//                 i : item
+//             }
+//         }
+//     }
+//     console.log(keys);
+//     console.log(wordLengths)
+// }
+
+// console.log(longestWordLength(['thermos', 'book', 'headphones']))

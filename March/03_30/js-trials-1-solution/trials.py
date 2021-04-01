@@ -85,6 +85,8 @@ def truncate(string):
 
     return ''.join(result)
 
+print(truncate('words'))
+
 
 def compress(string):
     compressed = []
