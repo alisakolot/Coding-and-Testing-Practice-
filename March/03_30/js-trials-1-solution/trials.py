@@ -125,3 +125,5 @@ def has_balanced_parens(string):
                 return False
 
     return parens < 0
+
+print(has_balanced_parens("(( )"))

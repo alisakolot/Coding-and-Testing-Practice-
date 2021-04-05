@@ -111,3 +111,35 @@ const user = {
 // for (const [key, value] of Object.entries(user)) {
 //     console.log(`${key} => ${value}`)
 // }
+
+
+// let student1 = {
+//     firstName: "Steven", 
+//     lastName: "Hancock", 
+//     student: true, 
+//     quiz1: 90, 
+//     q2: 70, 
+//     q3: "85", 
+//     quiz4: 100, 
+//     quiz5: 0
+// };
+
+// for (let key in student1) {
+//     console.log(key);
+//     console.log(student1[key]);
+// };
+
+// console.log(Object.keys(student1));
+// console.log(Object.values(student1));
+// console.log(Object.entries(student1));
+
+// filter method: allows you to filter values you dont want from an array, return array
+//  =>/arrow function: limited function expression, does not have its own bindings, doesnt have args, cannot be used as constructors
+// isNaN: returns true if val is not a number
+// const getScores = function(obj) {
+//     return Object.values(obj).filter(val => !isNaN(val) && 
+//     typeof (val !== 'boolean'));
+// };
+
+// let scores = getScores(student1);
+// console.log(scores);
