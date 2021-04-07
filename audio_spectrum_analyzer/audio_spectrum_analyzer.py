@@ -8,6 +8,13 @@ import matplotlib.pyplot as plt
 # from scipy.io import wavfile
 # fs, data = wavfile.read('output.wav')
 
+# Troubleshooting: 
+# import cv2
+
+# cam = cv2.VideoCapture(0)
+# print(cam.isOpened())
+# cam.release()
+
 
 # will display different window
 # % matplotlib qt5
@@ -71,16 +78,17 @@ while True:
 
     plt.show()
 
-# ax.plot(data_int, '-')
+ax.plot(data_int, '-')
 
 
-# print(data)
+print(data)
 
 
 
 for i in range(p.get_device_count()):#list all available audio devices
     dev = p.get_device_info_by_index(i)
     print((i,dev['name'],dev['maxInputChannels']))
-
+print(dev)
+print(p.get_device_count())
 
 print("\n *** Program ran *** \n")
