@@ -14,26 +14,26 @@ The string output needs to be in the specific form - "X hour(s) and X minute(s)"
 
 Tests:
     >>> to_time(3600)
-    "1 hour(s) and 0 minute(s)"
+    '1 hour(s) and 0 minute(s)'
 
     >>> to_time(3601)
-    "1 hour(s) and 0 minute(s)"
+    '1 hour(s) and 0 minute(s)'
 
     >>> to_time(3500)
-    "0 hour(s) and 58 minute(s)"
+    '0 hour(s) and 58 minute(s)'
 
     >>> to_time(323500)
-    "89 hour(s) and 51 minute(s)"
+    '89 hour(s) and 51 minute(s)'
 """
 
 def to_time(seconds): 
 
-    if seconds > 3600: 
-        hours = seconds // 3600 
-        # print(hours)
-        rem_minutes = seconds % 3600 
-        minutes = rem_minutes // 60
-        # print(minutes)
+   
+    hours = seconds // 3600 
+    # print(hours)
+    rem_minutes = seconds % 3600 
+    minutes = rem_minutes // 60
+    # print(minutes)
         
     return f"{hours} hour(s) and {minutes} minute(s)"
     
